@@ -6,12 +6,6 @@
 
 "use strict";
 
-/**
-/ * 
-function setup() {
-    // A 640x480 canvas
-    createCanvas(640, 640);
-}
 
 /**
 */
@@ -28,6 +22,9 @@ function draw() {
 
     // The Sun
     drawSun();
+
+    // Clouds
+    drawClouds();
 
     // The Mountains
     drawMountains();
@@ -49,7 +46,17 @@ function drawSun() {
     push();
     fill("yellow");
     noStroke();
-    ellipse(500, 100, 80, 80);
+    ellipse(475, 200, 100, 100);
+    pop();
+}
+
+function drawClouds() {
+    push();
+    fill("white");
+    noStroke();
+    ellipse(550, 110, 85, 85);
+    ellipse(575, 95, 80, 80);
+    ellipse(595, 110, 85, 85);
     pop();
 }
 
